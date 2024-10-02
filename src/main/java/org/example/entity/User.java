@@ -10,6 +10,7 @@ public class User {
     private String username;
     private String password_hash;
     private String privilege;
+    private String mobile;
     private Date regist_date;
     private Date update_date;
     public String getPassword() {

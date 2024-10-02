@@ -19,6 +19,8 @@ public class UserService {
     }
 
     public int insert(User user) {
+        // 处理注册数据
+        System.out.println(user);
         return userMapper.insert(user);
     }
 

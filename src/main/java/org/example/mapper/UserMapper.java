@@ -14,7 +14,7 @@ public interface UserMapper {   //定义了一个名为 UserMapper 的公共接�
     @Select("SELECT * FROM users WHERE username = #{username}")
     User findByUsername(String username);   //定义方法 findByUsername，传入参数 String username，返回类型为 User。
     //  创建用户
-    @Insert("INSERT INTO users (username, password_hash, privilege, regist_date, update_date) VALUES (#{username}, #{password}, #{privilege}, #{regist_date}, #{update_date})")
+    @Insert("INSERT INTO users (username, password_hash, privilege,mobile, regist_date, update_date) VALUES (#{username}, #{password}, #{privilege},#{mobile}, #{regist_date}, #{update_date})")
     @Options(useGeneratedKeys = true, keyProperty = "user_id")   //设置自动获取主键值，并将其设置到对象的 id 属性上。
     int insert(User user);
     //  更新密码

@@ -1,7 +1,10 @@
 package org.example.entity;
 
+import lombok.Data;
+
 import java.sql.Date;
 
+@Data
 public class Favorites {
     private int id;
     private int user_id;
