@@ -10,6 +10,10 @@ public interface UserMapper {   //定义了一个名为 UserMapper 的公共接�
     //  查询所有用户信息
     @Select("SELECT * FROM users")
     List<User> findAll();
+    //返回用户总数
+    @Select("SELECT COUNT(*) FROM users")
+    int countAllUser();
+
     //  查询指定用户信息
     @Select("SELECT * FROM users WHERE username = #{username}")
     User findByUsername(String username);   //定义方法 findByUsername，传入参数 String username，返回类型为 User。
@@ -18,7 +22,7 @@ public interface UserMapper {   //定义了一个名为 UserMapper 的公共接�
     @Options(useGeneratedKeys = true, keyProperty = "user_id")   //设置自动获取主键值，并将其设置到对象的 id 属性上。
     int insert(User user);
     //  更新密码
-    @Update("UPDATE users SET password_hash = #{password_hash}, privilege = #{privilege}, update_date = #{updateTime} WHERE user_id = #{id}")
+    @Update("UPDATE users SET username = #{username}, password_hash = #{password_hash}, privilege = #{privilege},mobile = #{mobile} WHERE user_id = #{user_id}")
     int update(User user);
     //  删除用户
     @Delete("DELETE FROM users WHERE user_id = #{id}")

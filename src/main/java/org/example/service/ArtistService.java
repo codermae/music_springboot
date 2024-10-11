@@ -15,6 +15,10 @@ public class ArtistService {
     public List<Artists> findAll(){
         return artistMapper.findAll();
     }
+
+    public int countArtist(){
+        return artistMapper.countArtists();
+    }
     public List<Artists> findById(int id){
         return artistMapper.findById(id);
     }

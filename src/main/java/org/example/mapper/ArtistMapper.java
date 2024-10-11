@@ -10,6 +10,10 @@ public interface ArtistMapper {
     //  查询所有歌手信息
     @Select("SELECT * FROM artists")
     List<Artists> findAll();
+
+    @Select("SELECT COUNT(*) FROM artists")
+    int countArtists();
+
     //  id查找
     @Select("SELECT * FROM artists WHERE artist_id = #{id}")
     List<Artists> findById(int id);

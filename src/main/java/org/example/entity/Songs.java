@@ -1,5 +1,6 @@
 package org.example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import java.sql.Date;
@@ -17,4 +18,10 @@ public class Songs {
     private Date publish_date;
     private int views;
     private int downloads;
+    private String genre;
+
+    @JsonIgnore
+    public void setId(int id) {
+        this.song_id = id;
+    }
 }

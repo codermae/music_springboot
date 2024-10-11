@@ -7,10 +7,20 @@
     <list default="true" id="1db24b94-97e2-415d-8c10-829264714b75" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Favorites.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Favorites.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/ArtistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/FavoritesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/FavoritesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/SongsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/SongsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Artists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Artists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Songs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mapper/ArtistMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mapper/ArtistMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mapper/FavoritesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mapper/FavoritesMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mapper/SongsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mapper/SongsMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/ArtistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/ArtistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/FavoritesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/FavoritesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/SongsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/SongsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -105,6 +115,15 @@
       <workItem from="1727420546738" duration="47000" />
       <workItem from="1727488831786" duration="5476000" />
       <workItem from="1727837742316" duration="11111000" />
+      <workItem from="1727867656433" duration="243000" />
+      <workItem from="1727918356227" duration="16836000" />
+      <workItem from="1728251094581" duration="1547000" />
+      <workItem from="1728285230045" duration="247000" />
+      <workItem from="1728285487575" duration="18247000" />
+      <workItem from="1728384653873" duration="7361000" />
+      <workItem from="1728501003166" duration="3814000" />
+      <workItem from="1728558677306" duration="258000" />
+      <workItem from="1728559307512" duration="25416000" />
     </task>
     <servers />
   </component>

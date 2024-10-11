@@ -2,10 +2,7 @@ package org.example.controller;
 
 import org.example.entity.Artists;
 import org.example.service.ArtistService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,6 +22,22 @@ public class ArtistController {
     @GetMapping("/{id}")
     public List<Artists> findById(@PathVariable int id){
         return artistService.findById(id);
+    }
+
+    @PostMapping
+    public int insert(@RequestBody Artists artist){
+        return artistService.insert(artist);
+    }
+
+    @DeleteMapping("/{id}")
+    public int deleteById(@PathVariable int id){
+        return artistService.deleteById(id);
+    }
+
+    @PutMapping("/{id}")
+    public int update(@PathVariable int id,@RequestBody Artists artist){
+        artist.setId(id);
+        return artistService.update(artist);
     }
 
 }

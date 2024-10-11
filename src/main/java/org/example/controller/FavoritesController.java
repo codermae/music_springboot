@@ -1,6 +1,7 @@
 package org.example.controller;
 
 import org.example.entity.Favorites;
+import org.example.entity.FavoritsSongDTO;
 import org.example.entity.Songs;
 import org.example.service.FavoritesService;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,7 @@ public class FavoritesController {
         this.favoritesService = favoritesService;
     }
     @GetMapping("/{user_id}")
-    public List<Songs> favoritesByUser_id(@PathVariable String user_id){
+    public List<FavoritsSongDTO> favoritesByUser_id(@PathVariable String user_id){
         return favoritesService.favoritesByUser_id(user_id);
     }
     @PostMapping

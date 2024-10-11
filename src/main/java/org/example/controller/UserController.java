@@ -17,6 +17,12 @@ public class UserController {
     public UserController(UserService userService) {
         this.userService = userService;
     }
+
+    @GetMapping("/countAll")
+    public int countAll(){
+        return userService.countUser();
+    }
+
     @GetMapping("/{username}")
     public User getUserByUsername(@PathVariable String username) {
         return userService.findByUsername(username);
@@ -45,7 +51,7 @@ public class UserController {
 
     @PutMapping("/{id}")
     public int updateUser(@PathVariable int id, @RequestBody User user) {
-//        user.setId(id); // 确保更新的是指定 ID 的用户
+        user.setId(id); // 确保更新的是指定 ID 的用户
         return userService.update(user);
     }
 

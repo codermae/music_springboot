@@ -1,5 +1,6 @@
 package org.example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 @Data
@@ -10,4 +11,9 @@ public class Artists {
     private String nationality;
     private String official_website;
     private String image_url;
+
+    @JsonIgnore
+    public void setId(int id) {
+        this.artist_id = id;
+    }
 }
