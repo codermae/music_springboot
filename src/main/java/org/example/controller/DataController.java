@@ -45,7 +45,7 @@ public class DataController {
     }
 
     //登录次数-折线
-    @GetMapping("/e")
+    @GetMapping("/line")
     public List<DailyLoginCount> getLoginCount(){
         return userService.loginCount();
     }

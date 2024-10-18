@@ -11,6 +11,7 @@ import java.util.List;
 
 @Mapper
 public interface DailyLoginCountMapper {
+    //  => DataController
     @Select("SELECT date,count FROM daily_login_counts")
     List<DailyLoginCount> loginCount();
 

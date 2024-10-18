@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.List;
 
 @Service
@@ -74,9 +75,19 @@ public class UserService {
     }
     private String extractDatePart(String dateTimeStr) {
         // 提取日期部分
-        ZonedDateTime dateTime = ZonedDateTime.parse(dateTimeStr);
-        LocalDate date = dateTime.toLocalDate();
-        return date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+//        ZonedDateTime dateTime = ZonedDateTime.parse(dateTimeStr);
+//        LocalDate date = dateTime.toLocalDate();
+//        return date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        try {
+            // 尝试解析完整的日期时间字符串
+            ZonedDateTime dateTime = ZonedDateTime.parse(dateTimeStr);
+            LocalDate date = dateTime.toLocalDate();
+            return date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        } catch (DateTimeParseException e) {
+            // 如果解析失败，尝试只解析日期部分
+            LocalDate date = LocalDate.parse(dateTimeStr);
+            return date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        }
     }
 
     public List<DailyLoginCount> loginCount() {

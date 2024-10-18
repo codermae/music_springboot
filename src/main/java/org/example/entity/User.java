@@ -28,6 +28,11 @@ public class User {
         return password_hash;
     }
 
+//    @JsonIgnore
+    public String getPrivilege() {
+        return privilege;
+    }
+
 //    public void setPassword(String password) {
 //        this.password_hash = password;
 //    }

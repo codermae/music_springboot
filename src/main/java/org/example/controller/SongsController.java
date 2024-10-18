@@ -20,7 +20,7 @@ public class SongsController {
         return songsService.findByKeyword(keyword);
     }
     @GetMapping("/ran")
-    public List<Songs> initSongs(){
+    public List<resultSongDTO> initSongs(){
         return songsService.initSongs();
     }
 
@@ -43,6 +43,8 @@ public class SongsController {
 
     @PutMapping("/{id}")
     public int updateSong(@PathVariable int id,@RequestBody Songs song){
+        System.out.println(song);
+        System.out.println(id);
         song.setId(id);
         return songsService.update(song);
     }

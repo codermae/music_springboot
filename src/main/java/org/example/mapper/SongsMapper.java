@@ -17,6 +17,7 @@ public interface SongsMapper {
             "    s.song_id,\n" +
             "    s.song_name,\n" +
             "    s.file_path,\n" +
+            "    s.duration,\n " +
             "    a.album_name,\n" +
             "    ar.artist_name\n" +
             "FROM \n" +
@@ -29,8 +30,23 @@ public interface SongsMapper {
             "    s.song_name LIKE CONCAT('%',#{keyword},'%') OR s.performer LIKE CONCAT('%',#{keyword},'%')")
     List<resultSongDTO> findByKeyword(String keyword);
     //  默认展示
-    @Select("SELECT * FROM (SELECT * FROM songs ORDER BY RAND() LIMIT 10) AS t ORDER BY RAND() LIMIT 5")
-    List<Songs> initSongs();
+    @Select("SELECT \n" +
+            "    s.song_id,\n" +
+            "    s.song_name,\n" +
+            "    s.file_path,\n" +
+            "    s.duration,\n" +
+            "    a.album_name,\n" +
+            "    ar.artist_name\n" +
+            "FROM \n" +
+            "    songs s\n" +
+            "JOIN \n" +
+            "    albums a ON s.album_id = a.album_id\n" +
+            "JOIN \n" +
+            "    artists ar ON s.artist_id = ar.artist_id\n" +
+            "ORDER BY \n" +
+            "    RAND()\n" +
+            "LIMIT 5")
+    List<resultSongDTO> initSongs();
 
     @Select("SELECT * FROM songs")
     List<Songs> allSongs();
@@ -52,7 +68,7 @@ public interface SongsMapper {
     @Delete("DELETE FROM songs WHERE song_id = #{id}")
     int deleteById(int id);
 
-    @Update("UPDATE songs SET song_name = #{song_name}, performer = #{performer}, artist_id = #{artist_id}, album_id = #{album_id}, duration = #{duration}, file_path = #{file_path}, publish_date = #{publish_date}, views = #{views}, downloads = #{downloads},genre = #{genre} WHERE song_id = #{song_id}")
+    @Update("UPDATE songs SET song_name = #{song_name}, performer = #{performer}, artist_id = #{artist_id}, album_id = #{album_id}, duration = #{duration}, file_path = #{file_path}, publish_date = #{publish_date}, views = #{views}, downloads = #{downloads}, genre = #{genre} WHERE song_id = #{song_id}")
     int update(Songs song);
 
 }

@@ -17,7 +17,7 @@ public class SongsService {
     public List<resultSongDTO> findByKeyword(String keyword){
         return songsMapper.findByKeyword(keyword);
     }
-    public List<Songs> initSongs(){
+    public List<resultSongDTO> initSongs(){
         return songsMapper.initSongs();
     }
 

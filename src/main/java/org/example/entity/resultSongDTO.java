@@ -7,6 +7,7 @@ public class resultSongDTO {
     private int song_id;
     private String song_name;
     private String file_path;
+    private String duration;
     private String album_name;
     private String artist_name;
 }
